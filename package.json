@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preprepare": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
-    "prebuild": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
-    "preinstall": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
-    "install": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
+    "preinstall": "python3 --version && cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh && nodemon index.js",
+    "dev": "nodemon index.js",
     "start":"node index.js load && node index.js"
   },
   "repository": {
