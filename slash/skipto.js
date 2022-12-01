@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders")
 const { MessageEmbed } = require("discord.js")
 
 module.exports = {
-    data: new SlashCommandBuild()
+    data: new SlashCommandBuilder()
        .setName("skipto")
        .setDescription("Skips to a certain track number")
        .addNumberOption((option) => option.setName("tracknumber").setDescription("The track to skip to").setMinValue(1).setRequired(true)),

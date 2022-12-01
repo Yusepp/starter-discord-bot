@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders")
 
 module.exports = {
-    data: new SlashCommandBuild()
+    data: new SlashCommandBuilder()
        .setName("shuffle")
        .setDescription("Shuffles the queue."),
     run: async ({client, interaction}) => {

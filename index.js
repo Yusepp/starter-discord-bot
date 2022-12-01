@@ -11,15 +11,20 @@ const CLIENT_ID = APPLICATION_ID
 
 const Discord = require("discord.js")
 const { REST } = require('@discordjs/rest')
-const { Routes } = require('@discord-api-types/v9')
+const { Routes } = require('discord-api-types/v9')
 const fs = require("fs")
 const { Player } = require('discord-player')
 const LOAD_SLASH = process.argv[2] == "load"
+const { GatewayIntentBits } = require('discord.js');
 
 const client = new Discord.Client({
 	intents: [
-		"GUILDS",
-		"GUILD_VOICE_STATES"
+		GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildIntegrations,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildVoiceStates,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.DirectMessages
 	]
 })
 
@@ -57,8 +62,8 @@ else {
 	client.on("ready", () =>{
 			console.log(`Logged in as ${client.user.tag}`)
 	})
-	client.on("interactionCreate", (interaction) => {
-		async function handleCommand() {
+	client.on("interactionCreate", async (interaction) => {
+	
 			if (!interaction.isCommand())  return
 
 			const slashcmd = client.slashcommands.get(interaction.commandName)
@@ -66,8 +71,7 @@ else {
 
 			await interaction.deferReply()
 			await slashcmd.run({client, interaction})
-		}
-		handleCommand()
+		
 	})
 	client.login(TOKEN)
 }
@@ -163,7 +167,6 @@ app.get('/register_commands', async (req,res) =>{
     return res.send('commands have been registered')
   }catch(e){
     console.error(e.code)
-    console.error(e.response?.data)
     return res.send(`${e.code} error from discord`)
   }
 })

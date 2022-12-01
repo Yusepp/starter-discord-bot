@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders")
 const { MessageEmbed } = require("discord.js")
 
 module.exports = {
-    data: new SlashCommandBuild()
+    data: new SlashCommandBuilder()
        .setName("info")
        .setDescription("Displays info about the currently playing song"),
     run: async ({client, interaction}) => {

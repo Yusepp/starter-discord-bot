@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders")
 const { MessageEmbed } = require("discord.js")
 
 module.exports = {
-    data: new SlashCommandBuild()
+    data: new SlashCommandBuilder()
        .setName("pause")
        .setDescription("Pauses the bot."),
     run: async ({client, interaction}) => {
