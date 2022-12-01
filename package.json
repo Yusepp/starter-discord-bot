@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preprepare": "chmod +x ./update_python.sh && ./update_python.sh",
-    "prebuild": "chmod +x ./update_python.sh && ./update_python.sh",
-    "preinstall": "chmod +x ./update_python.sh && ./update_python.sh",
-    "install": "chmod +x ./update_python.sh && ./update_python.sh",
+    "preprepare": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
+    "prebuild": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
+    "preinstall": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
+    "install": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "chmod +x ./update_python.sh && ./update_python.sh && nodemon index.js",
+    "dev": "cat /etc/*-release && chmod +x ./update_python.sh && ./update_python.sh && nodemon index.js",
     "start":"node index.js load && node index.js"
   },
   "repository": {
