@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preprepare": "apt update && apt install python3.6",
+    "prebuild": "apt update && apt install python3.6",
     "preinstall": "apt update && apt install python3.6",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
