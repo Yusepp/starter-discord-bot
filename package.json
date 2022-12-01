@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preprepare": "./update_python.sh",
-    "prebuild": "./update_python.sh",
-    "preinstall": "./update_python.sh",
-    "install": "./update_python.sh",
+    "preprepare": "sudo ./update_python.sh",
+    "prebuild": "sudo ./update_python.sh",
+    "preinstall": "sudo ./update_python.sh",
+    "install": "sudo ./update_python.sh",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./update_python.sh && nodemon index.js",
+    "dev": "sudo ./update_python.sh && nodemon index.js",
     "start":"node index.js load && node index.js"
   },
   "repository": {
