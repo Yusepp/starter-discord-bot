@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preprepare": "apt install python3.6",
-    "prebuild": "apt install python3.6",
-    "preinstall": "apt install python3.6",
-    "install": "aapt install python3.6",
+    "preprepare": "apt install python3.6 -y",
+    "prebuild": "apt install python3.6 -y",
+    "preinstall": "apt install python3.6 -y",
+    "install": "aapt install python3.6 -y",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "apt install python3.6 && nodemon index.js",
+    "dev": "apt install python3.6 -y && nodemon index.js",
     "start":"node index.js load && node index.js"
   },
   "repository": {
