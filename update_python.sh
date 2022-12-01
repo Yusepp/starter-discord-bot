@@ -1,1 +1,1 @@
-apt install python3.6 -y
+python3 --version && apt install python3.6 -y
