@@ -1,1 +1,1 @@
-python3 --version && apt install python3.6 -y
+yum update -y && yum install -y python3
