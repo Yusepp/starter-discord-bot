@@ -9,7 +9,7 @@
     "preinstall": "apt update && apt install python3.6",
     "install": "apt update && apt install python3.6",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js",
+    "dev": "apt update && apt install python3.6 && nodemon index.js",
     "start":"node index.js load && node index.js"
   },
   "repository": {
